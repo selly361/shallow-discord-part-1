@@ -74,6 +74,7 @@ const Username = styled.input`
 `
 const Welcome = styled.h1`
     color: white;
+    text-align: center;
 `
 const Submit = styled.button`
     height: 3.5rem;
@@ -112,10 +113,10 @@ function Login() {
     return ( 
         <Body>
             <LoginContainer>
-                <Welcome>{localStorage.getItem('name') ? 'Welcome Back ' + localStorage.getItem('name') + '!' : 'Hello, Enter a Username!'}</Welcome>
+                <Welcome>{localStorage.getItem('name') ? 'Welcome Back ' + localStorage.getItem('name') + '!' : 'Hello, Enter a Username to get started!👇'}</Welcome>
                 {localStorage.getItem('name') ? '' : <Username 
                     ref={nameElement}
-                    type='text' placeholder='Your Username' required/>}
+                    type='text' placeholder='Your Username' maxLength={12} required/>}
                 {
                 localStorage.getItem('name') ? 
                 <Link className='Login' to='/home'>Login</Link>

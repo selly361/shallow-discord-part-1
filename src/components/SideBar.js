@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Server from "./Server";
+import Icons from "./Icons";
 
 const SideBarContainer = styled.aside
-    `height: 99%;
+    `
     width: 80px;
     background-color: #202225;
     display: flex;
@@ -10,6 +10,7 @@ const SideBarContainer = styled.aside
     align-items: center;
     gap: 1.2rem;
     padding-top: .45rem;
+    z-index: 1;
    
 `
 
@@ -17,11 +18,11 @@ const SideBarContainer = styled.aside
 function SideBar() {
     return ( 
         <SideBarContainer>
-            <Server id={0} />
-            <Server id={1} />
-            <Server id={2} />
-            <Server id={3} />
-  
+            <Icons id={0} />
+            <Icons id={1} />
+            <Icons id={2} />
+            <Icons id={3} />
+            <Icons id={4} />
 
         </SideBarContainer>
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SideBar from "./SideBar";
 import styled from "styled-components";
+import Header from "./Header";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -23,6 +24,7 @@ function Home() {
 
     return ( 
         <Body>
+            <Header />
             <SideBar />
         </Body>
      );
